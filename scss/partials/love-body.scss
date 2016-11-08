@@ -1,0 +1,40 @@
+@import 'mixins';
+
+$white-color: #fff;
+$green-color: #a2ca28;
+$red-color: #fd634e;
+$dark-color: #131211;
+
+.love-body {
+    background-color: $green-color;  
+    padding: 0;
+    @include style__small();
+    @include style__big();
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    &__big {                
+        background: url('../img/layer-28.png') no-repeat;
+        background-size: cover;
+        justify-content: flex-start;
+        align-items: flex-end;
+        p {
+            color: $white-color;
+            margin: 0 0 51px 73px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .love-body {
+        .flex-wrap {
+            flex-direction: column;
+        }
+        &__small {
+            max-width: 100%;
+        }
+        &__big {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.love-body {
+  background-color: #a2ca28;
+  padding: 0;
+}
+
+.love-body .flex-wrap {
+  flex-wrap: wrap;
+}
+
+.love-body__left {
+  height: 394px;
+  background: url("../img/layer-28.png") no-repeat;
+  flex: 2;
+}
+
+.love-body__right {
+  height: 394px;
+  background-color: #fff;
+  flex: 1;
+}

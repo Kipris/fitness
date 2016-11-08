@@ -1,0 +1,26 @@
+$white-color: #fff;
+$green-color: #a2ca28;
+$red-color: #fd634e;
+$dark-color: #131211;
+
+.launch-leaders {
+    height: 800px;
+    background: url('../img/layer-8.png') center center no-repeat;
+    background-size: cover;
+    color: $white-color;
+    padding: 240px 10px 374px 10px;
+    text-align: center;
+    .flex-wrap {
+        justify-content: center;
+    }    
+    &__heading {
+        font-size: 45px;
+        font-weight: 400;
+        margin-bottom: 25px;
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23px;
+    }
+}

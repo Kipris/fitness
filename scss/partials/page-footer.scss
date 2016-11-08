@@ -1,0 +1,124 @@
+$white-color: #fff;
+$light-color: #8297a7;
+$green-color: #a2ca28;
+$red-color: #fd634e;
+$dark-color: #131211;
+$dark-blue-color: #0d1119;
+
+.page-footer {
+    background-color: $dark-blue-color;
+    padding: 67px 0 500px 0;
+    &__item {
+        flex: 1;
+        color: $light-color;
+        padding: 0 10px;
+    }
+    &__heading {
+        color: $white-color;
+        font-size: 15px;
+        margin-bottom: 29px;
+    }
+    &__text {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+        margin-bottom: 31px;
+    }
+    &__social-icons {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 31px;
+    }
+    &__icon {
+        min-width: 51px;
+        min-height: 51px;
+        border-radius: 50%;
+        color: $white-color;
+        text-decoration: none;
+        transition: .3s;
+        font-size: 19px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px;
+        &--facebook {
+            background-color: #2e3192;
+        }
+        &--twitter {
+            background-color: #00aeef;
+        }
+        &--youtube {
+            background-color: #ed3123;
+        }
+        &--linkedin {
+            background-color: #171a8f;
+        }
+    }
+    &__form {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__name,
+    &__email,
+    &__submit {
+        height: 49px;
+        background: $white-color;
+        padding: 16px 22px 18px;
+        border-radius: 2px;
+        border: none;
+        margin: 0 3px;
+    }
+    &__name {
+        
+    }
+    &__email {
+        
+    }
+    &__submit {
+       cursor: pointer;    
+       background: $green-color;
+       color: $white-color;
+       padding: 0 22px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .page-footer {
+        &__item {
+            min-width: 50%;  
+            &:last-child {
+                text-align: center;
+            }
+        }
+        &__social-icons {
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-footer {
+        padding: 67px 50px 500px;
+        &__item {           
+        }
+        &__form {
+            flex-direction: column;
+            
+        }
+        &__name,
+        &__email,
+        &__submit {
+            text-align: center;
+            margin: 0 0 6px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .page-footer {
+        &__item {
+            min-width: 100%;  
+            text-align: center;
+        }
+    }
+}

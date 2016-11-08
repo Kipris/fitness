@@ -1,0 +1,80 @@
+@import 'mixins';
+
+$white-color: #fff;
+$green-color: #a2ca28;
+$red-color: #fd634e;
+$dark-color: #131211;
+
+.eating-habits {
+    color: $white-color;
+    background-color: $green-color;
+    padding: 0;
+    height: 640px;
+    display: flex;
+    flex-direction: column;    
+    flex: 1;
+    @include style__small();
+    @include style__big();
+    &__top {
+        background: url('../img/layer-30.png') no-repeat;
+        background-size: cover;
+        min-height: 330px;
+        flex: 1;
+    }
+    &__small {
+        color: inherit;
+        flex: 1;
+        text-align: left;
+        max-width: 100%;
+        max-height: 310px;
+        background-color: transparent;
+        padding-right: 55px;
+        &::after {
+            content: '';
+            display: block;
+            width: 26px;
+            height: 38px;
+            float: right;
+            margin-right: -32px;
+            margin-top: -195px;
+            background: url('../img/avocado-ico.svg')
+        }
+    } 
+    &__text-small,
+    &__heading,
+    &__text {
+        color: inherit;
+    }
+    &__text {
+        font-weight: 300;
+    }
+    &__heading {  
+        margin-bottom: 30px;
+        &::after {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .eating-habits {
+        &__heading {  
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .eating-habits {
+        flex: 2;
+        &__small {
+            padding-top: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .eating-habits {
+        display: none;
+    }
+}

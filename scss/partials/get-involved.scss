@@ -1,0 +1,76 @@
+@import 'mixins';
+
+$white-color: #fff;
+$green-color: #a2ca28;
+$red-color: #fd634e;
+$dark-color: #131211;
+
+.get-involved {
+    background-color: $white-color;
+    padding: 0;
+    height: 640px;
+    display: flex;
+    flex-direction: column;    
+    flex: 2;
+    @include style__small();
+    @include style__big();
+    &__top {
+        background: url('../img/layer-31.png') center center no-repeat;
+        background-size: cover;
+        min-height: 330px;
+        flex: 1;
+    }
+    &__small {        
+        flex: 1;
+        max-width: 100%;
+        max-height: 310px;
+//        background-color: transparent;
+        text-align: left;
+        padding-right: 70px;
+        &::after {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 38px;
+            float: right;
+            margin-right: -32px;
+            margin-top: -170px;
+            background: url('../img/strawberry-ico.svg')
+        }
+    }  
+    &__heading {
+        margin-bottom: 30px;
+        &::after {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .get-involved {
+        &__heading {  
+            margin-bottom: 15px;
+        }    
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .get-involved {
+        flex: 3;
+        &__small {
+            padding-top: 25px;
+            padding-right: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .get-involved {
+        height: 100%;
+        &__small {
+            text-align: center;
+            height: 100%; 
+            max-height: 100%;
+        }
+    }
+}

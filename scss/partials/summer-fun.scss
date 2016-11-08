@@ -1,0 +1,96 @@
+@import 'mixins';
+
+$white-color: #fff;
+$green-color: #a2ca28;
+$red-color: #fd634e;
+$dark-color: #131211;
+
+.summer-fun {
+    color: $white-color;
+    background-color: $green-color;
+    padding: 0;
+    height: 640px;
+    display: flex;
+    flex-direction: column;    
+    flex: 2;
+    @include style__small();
+    @include style__big();
+    &__top {
+        background: url('../img/layer-29.png') no-repeat;
+        background-size: cover;
+        min-height: 330px;
+        padding: 63px 59px 0;
+        font-weight: 600;
+        letter-spacing: 2px;
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        color: inherit;
+        flex: 1;
+        &--text {
+            display: flex;
+            &:last-child {
+                text-align: end;
+            }
+            &:last-child::after {
+               content: '';
+               display: block;
+               width: 19px;
+               height: 19px; 
+               margin-left: 10px;    
+               background: url('../img/tag-ico.svg'); 
+            }
+        }
+    }
+    &__small {
+        box-shadow: 0 0 62px rgba(0, 0, 0, 0.4);
+        flex: 1;
+        max-width: 100%;
+        max-height: 310px;
+        text-align: left;
+        background-color: transparent;        
+    }    
+    &__heading {
+        color: inherit;
+        font-weight: 100;
+        margin-bottom: 30px;
+        &::after {
+            display: none;
+        }
+    }
+    &__text {
+        color: inherit;
+        font-weight: 100;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .summer-fun {
+        flex: 3;
+        &__top {
+            padding: 30px 30px 0;
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .summer-fun {
+        &__small {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .summer-fun {
+        height: 100%;
+        &__top {
+            font-size: 12px;
+        }
+        &__small {
+            max-height: 100%;
+        }
+    }
+}
+

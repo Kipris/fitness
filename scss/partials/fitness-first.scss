@@ -1,0 +1,29 @@
+@import 'mixins';
+$white-color: #fff;
+$green-color: #a2ca28;
+$red-color: #fd634e;
+$dark-color: #131211;
+
+.fitness-first {
+    background-color: $green-color; 
+    @include style__small();
+    @include style__big();
+    .flex-wrap {
+        flex-wrap: wrap;
+    }    
+    &__big {        
+        background: url('../img/layer-26.png') no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fitness-first {
+        .flex-wrap {
+            flex-direction: column;
+        }
+        &__small {
+            max-width: 100%;
+        }
+    }
+}
