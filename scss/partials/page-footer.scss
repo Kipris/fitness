@@ -7,7 +7,7 @@ $dark-blue-color: #0d1119;
 
 .page-footer {
     background-color: $dark-blue-color;
-    padding: 67px 0 500px 0;
+    padding: 67px 0 100px 0;
     &__item {
         flex: 1;
         color: $light-color;
@@ -98,7 +98,7 @@ $dark-blue-color: #0d1119;
 
 @media screen and (max-width: 768px) {
     .page-footer {
-        padding: 67px 50px 500px;
+        padding: 67px 50px 100px;
         &__item {           
         }
         &__form {
